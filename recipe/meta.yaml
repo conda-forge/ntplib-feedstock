@@ -1,5 +1,5 @@
 {% set name = "ntplib" %}
-{% set version = "0.3.4-py3-none-any" %}
+{% set version = "0.3.4" %}
 {% set sha256 = "63b99b0ac670f8283b8d8e5cf75aab1d0d9f62e17d38d1fedc4291e1ce8bd052" %}
 
 package:
@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.whl
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}-py3-none-any.whl
   sha256: {{ sha256 }}
 
 build:
