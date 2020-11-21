@@ -1,6 +1,6 @@
 {% set name = "ntplib" %}
-{% set version = "0.3.3" %}
-{% set sha256 = "c4621b64d50be9461d9bd9a71ba0b4af06fbbf818bbd483752d95c1a4e273ede" %}
+{% set version = "0.3.4" %}
+{% set sha256 = "9fc99f71b14641b31698e4ced3d5f974eec225bfbae089ebe44b5808ba890f71" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: python -m pip install --no-deps --ignore-installed  .
   noarch: python
 
@@ -21,19 +21,19 @@ requirements:
     - pip
   run:
     - python
-    
+
 test:
   imports:
     - ntplib
-  
+
 about:
   home: https://pypi.org/project/ntplib/
   license: MIT
   license_family: MIT
-  summary: 'This module offers a simple interface to query NTP servers from Python.'
+  summary: This module offers a simple interface to query NTP servers from Python.
   description: |
     It also provides utility functions to translate NTP fields values to text (mode, leap indicator…). Since it’s pure Python, and only depends on core modules, it should work on any platform with a Python implementation.
-  
+
 extra:
   recipe-maintainers:
     - iparask
